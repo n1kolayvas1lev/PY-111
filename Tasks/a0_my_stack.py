@@ -37,8 +37,8 @@ class Stack:
         :param ind: index of element (count from the top, 0 - top, 1 - first from top, etc.)
         :return: peeked element or None if no element in this place
         """
-        if ind in len(self.stack):
-            return self.stack[ind]
+        if ind < len(self.stack):
+            return self.stack[-1 - ind]
         return None
 
 
